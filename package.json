@@ -39,6 +39,7 @@
     "@angular-devkit/build-angular": "17.3.11",
     "@angular/cli": "17.3.11",
     "@angular/compiler-cli": "17.3.12",
+    "@capacitor/android": "^5.7.8",
     "@capacitor/cli": "5.7.8",
     "typescript": "5.4.5"
   }

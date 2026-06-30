@@ -21,8 +21,9 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
-# Capacitor / native (generated)
-/android
+# Capacitor / native
+# The android/ project IS committed (Capacitor adds its own android/.gitignore
+# for build outputs). iOS is not used in this starter.
 /ios
 
 # Misc
