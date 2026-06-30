@@ -1,0 +1,47 @@
+{
+  "app": {
+    "name": "MobileApp",
+    "tagline": "Your starter template"
+  },
+  "common": {
+    "loading": "Loading…",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "logout": "Logout",
+    "back": "Back",
+    "retry": "Retry",
+    "comingSoon": "Coming soon",
+    "noData": "Nothing here yet"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "createAccount": "Create account",
+    "selectRole": "Demo role (placeholder)"
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "menu": "Menu",
+    "profile": "Profile"
+  },
+  "screens": {
+    "dashboard": "Dashboard",
+    "menu": "Main Menu",
+    "profile": "Profile",
+    "appManagement": "App / Version Management"
+  },
+  "status": {
+    "serverDown": "We'll be right back",
+    "serverDownMsg": "The app is under maintenance. Please check back shortly.",
+    "updateTitle": "Update required",
+    "updateMsg": "A new version is available. Please update to continue.",
+    "updateNow": "Update now",
+    "offline": "You are offline",
+    "offlineMsg": "Check your internet connection."
+  }
+}

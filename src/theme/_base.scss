@@ -1,0 +1,71 @@
+/* ════════════════════════════════════════════════════════════════════
+   BASE — reset + root element styles (all values come from _tokens.scss)
+═══════════════════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+  scroll-behavior: auto;
+}
+
+body {
+  height: 100%;
+  font-family: var(--font-family);
+  font-size: var(--fs-md);
+  line-height: var(--line-height);
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+img { max-width: 100%; display: block; }
+
+/* Keep content within the viewport on every device */
+svg, video, canvas, iframe, table { max-width: 100%; }
+input, textarea, select, .form-control { max-width: 100%; box-sizing: border-box; }
+pre { white-space: pre-wrap; word-break: break-word; overflow-wrap: anywhere; max-width: 100%; overflow-x: auto; }
+
+/* Remove number-input spinner arrows globally */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type=number] { -moz-appearance: textfield; appearance: textfield; }
+
+/* Instant touch response for interactive elements */
+button, [role="button"], .tab-item {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* ─── Mobile shell ── */
+.page-wrapper {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--n-50);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.05), 0 20px 60px rgba(0,0,0,.15);
+}
+
+/* Scrollable screen body — header is fixed, bottom-nav pads the bottom */
+.screen {
+  flex: 1;
+  padding-bottom: var(--nav-h);
+  min-height: 100dvh;
+  background: var(--bg);
+  overflow-x: hidden;
+}
+.screen-inner { padding: var(--space-4) var(--space-4) var(--space-6); }
+
+/* Spacer that compensates for the fixed header height */
+.hdr-spacer { height: var(--header-h); flex-shrink: 0; }

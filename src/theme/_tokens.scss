@@ -1,0 +1,110 @@
+/* ════════════════════════════════════════════════════════════════════
+   DESIGN TOKENS — SINGLE SOURCE OF TRUTH FOR ALL STYLING
+   --------------------------------------------------------------------
+   Change a value here and it updates everywhere in the app.
+   Everything else (components, utilities, screens) references var(--token).
+   Do NOT hardcode hex colors / pixel values anywhere else.
+   See docs/THEMING.md for the full guide.
+═══════════════════════════════════════════════════════════════════════ */
+:root {
+  /* ─── Brand / Primary palette ───────────────────────────────────── */
+  --primary:        #4f46e5;   /* main brand color — change this first */
+  --primary-dark:   #4338ca;
+  --primary-light:  #818cf8;
+  --primary-surface:#eef2ff;   /* tinted background for primary areas   */
+  --on-primary:     #ffffff;   /* text/icon color on top of --primary   */
+
+  /* ─── Accent ────────────────────────────────────────────────────── */
+  --accent:         #06b6d4;
+  --accent-light:   #67e8f9;
+
+  /* ─── Per-role accent (swapped via .admin-theme / .customer-theme / .employee-theme) ─ */
+  --admin-accent:    #16a34a;   /* green   */
+  --customer-accent: #4f46e5;   /* indigo  */
+  --employee-accent: #0891b2;   /* cyan    */
+
+  /* ─── Neutral scale (light → dark) ──────────────────────────────── */
+  --n-0:    #ffffff;
+  --n-50:   #fafafa;
+  --n-100:  #f4f4f5;
+  --n-200:  #e4e4e7;
+  --n-300:  #d4d4d8;
+  --n-400:  #a1a1aa;
+  --n-500:  #71717a;
+  --n-700:  #3f3f46;
+  --n-900:  #18181b;
+
+  /* ─── Semantic colors ───────────────────────────────────────────── */
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --danger:  #ef4444;
+  --info:    #3b82f6;
+
+  /* ─── Convenience aliases (semantic surface/text) ───────────────── */
+  --bg:            var(--n-100);
+  --surface:       var(--n-0);
+  --text:          var(--n-900);
+  --text-muted:    var(--n-500);
+  --text-faint:    var(--n-400);
+  --border:        var(--n-200);
+
+  /* ─── Typography ────────────────────────────────────────────────── */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --fs-xs:   11px;
+  --fs-sm:   12px;
+  --fs-md:   14px;   /* base body size */
+  --fs-lg:   16px;
+  --fs-xl:   20px;
+  --fs-2xl:  24px;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semi:   600;
+  --fw-bold:   700;
+  --fw-black:  800;
+  --line-height: 1.5;
+
+  /* ─── Spacing scale ─────────────────────────────────────────────── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+
+  /* ─── Radius ────────────────────────────────────────────────────── */
+  --r-sm:   8px;
+  --r-md:   14px;
+  --r-lg:   20px;
+  --r-xl:   28px;
+  --r-full: 999px;
+
+  /* ─── Shadows ───────────────────────────────────────────────────── */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.10);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,.14);
+
+  /* ─── Layout ────────────────────────────────────────────────────── */
+  --max-w: 480px;   /* mobile shell max width */
+
+  /* ─── Safe-area insets (device notches) ─────────────────────────── */
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+
+  /* ─── Component heights (derived) ───────────────────────────────── */
+  --header-h: calc(56px + var(--sat));
+  --nav-h:    calc(60px + var(--sab));
+
+  /* ─── Motion ────────────────────────────────────────────────────── */
+  --transition: .15s ease;
+}
+
+/* ─── Per-role theming: one class swaps the active accent ───────────
+   Add `admin-theme` / `customer-theme` / `employee-theme` to .page-wrapper. */
+.admin-theme    { --primary: var(--admin-accent);    --primary-dark: #15803d; --primary-surface: #f0fdf4; }
+.customer-theme { --primary: var(--customer-accent); --primary-dark: #4338ca; --primary-surface: #eef2ff; }
+.employee-theme { --primary: var(--employee-accent); --primary-dark: #0e7490; --primary-surface: #ecfeff; }

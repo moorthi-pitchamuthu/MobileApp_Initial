@@ -1,0 +1,10 @@
+/* ════════════════════════════════════════════════════════════════════
+   GLOBAL STYLESHEET
+   This file intentionally contains almost nothing — it just pulls in the
+   theme partials. To restyle the whole app, edit src/theme/_tokens.scss.
+   See docs/THEMING.md.
+═══════════════════════════════════════════════════════════════════════ */
+@use 'theme/tokens';
+@use 'theme/base';
+@use 'theme/components';
+@use 'theme/utilities';
